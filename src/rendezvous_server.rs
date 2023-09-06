@@ -92,7 +92,7 @@ impl RendezvousServer {
     #[tokio::main(flavor = "multi_thread")]
     pub async fn start(port: i32, serial: i32, key: &str, rmem: usize) -> ResultType<()> {
         let (key, sk) = Self::get_server_sk(key);
-        let nat_port = port - 1;
+        let nat_port = port + 3;
         let ws_port = port + 2;
         let pm = PeerMap::new().await?;
         log::info!("serial={}", serial);

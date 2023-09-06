@@ -32,10 +32,10 @@ jobs:
       matrix:
         job:
           - { name: "amd64",   target: "x86_64-unknown-linux-musl" }
-          - { name: "arm64v8", target: "aarch64-unknown-linux-musl" }
-          - { name: "armv7",   target: "armv7-unknown-linux-musleabihf" }
-          - { name: "i386",    target: "i686-unknown-linux-musl" }
-          - { name: "amd64fb",    target: "x86_64-unknown-freebsd" }
+          # - { name: "arm64v8", target: "aarch64-unknown-linux-musl" }
+          # - { name: "armv7",   target: "armv7-unknown-linux-musleabihf" }
+          # - { name: "i386",    target: "i686-unknown-linux-musl" }
+          # - { name: "amd64fb",    target: "x86_64-unknown-freebsd" }
 
     steps:
       
@@ -172,11 +172,11 @@ jobs:
       matrix:
         job:
           - { os: "linux", name: "amd64" }
-          - { os: "linux", name: "arm64v8" }
-          - { os: "linux", name: "armv7" }
-          - { os: "linux", name: "i386" }
-          - { os: "linux", name: "amd64fb" }
-          - { os: "windows", name: "x86_64" }
+          # - { os: "linux", name: "arm64v8" }
+          # - { os: "linux", name: "armv7" }
+          # - { os: "linux", name: "i386" }
+          # - { os: "linux", name: "amd64fb" }
+          # - { os: "windows", name: "x86_64" }
           
     steps:
 
@@ -212,9 +212,9 @@ jobs:
       matrix:
         job:
           - { name: "amd64",   docker_platform: "linux/amd64",  s6_platform: "x86_64" }
-          - { name: "arm64v8", docker_platform: "linux/arm64",  s6_platform: "aarch64" }
-          - { name: "armv7",   docker_platform: "linux/arm/v7", s6_platform: "armhf" }
-          - { name: "i386",    docker_platform: "linux/386",    s6_platform: "i686" }
+          # - { name: "arm64v8", docker_platform: "linux/arm64",  s6_platform: "aarch64" }
+          # - { name: "armv7",   docker_platform: "linux/arm/v7", s6_platform: "armhf" }
+          # - { name: "i386",    docker_platform: "linux/386",    s6_platform: "i686" }
 
     steps:
 
@@ -333,8 +333,8 @@ jobs:
       matrix:
         job:
           - { name: "amd64",   docker_platform: "linux/amd64" }
-          - { name: "arm64v8", docker_platform: "linux/arm64" }
-          - { name: "armv7",   docker_platform: "linux/arm/v7" }
+          # - { name: "arm64v8", docker_platform: "linux/arm64" }
+          # - { name: "armv7",   docker_platform: "linux/arm/v7" }
 
     steps:
 
@@ -450,9 +450,9 @@ jobs:
       matrix:
         job:
           - { name: "amd64",   debian_platform: "amd64",   crossbuild_package: "" }
-          - { name: "arm64v8", debian_platform: "arm64",   crossbuild_package: "crossbuild-essential-arm64" }
-          - { name: "armv7",   debian_platform: "armhf",   crossbuild_package: "crossbuild-essential-armhf" }
-          - { name: "i386",    debian_platform: "i386",    crossbuild_package: "crossbuild-essential-i386" }
+          # - { name: "arm64v8", debian_platform: "arm64",   crossbuild_package: "crossbuild-essential-arm64" }
+          # - { name: "armv7",   debian_platform: "armhf",   crossbuild_package: "crossbuild-essential-armhf" }
+          # - { name: "i386",    debian_platform: "i386",    crossbuild_package: "crossbuild-essential-i386" }
 
     steps:
 
